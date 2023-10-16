@@ -1,2 +1,4 @@
-# 51tracking-sdk-ruby
-The Ruby SDK of Trackingmore API
+51tracking-sdk-ruby
+=================
+
+The Ruby SDK of 51
