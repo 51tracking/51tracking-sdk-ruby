@@ -74,8 +74,8 @@ require '51tracking'
 Tracking51.api_key = 'you api key'
 
 begin
-   params = { "tracking_number" => "" }
-   response = Tracking51::Courier.detect(params)
+   params  = {"tracking_number" => "","courier_code"=>"usps"}
+   response = Tracking51::Tracking.create_tracking(params)
    puts response
 rescue Tracking51::Tracking51Exception => e
    puts "Caught Custom Exception: #{e.message}"
