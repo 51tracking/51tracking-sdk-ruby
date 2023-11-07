@@ -38,6 +38,8 @@ begin
    puts response
 rescue Tracking51::Tracking51Exception => e
    puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 
 ```
@@ -94,6 +96,8 @@ begin
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 ```
 
@@ -107,6 +111,8 @@ begin
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 ```
 
@@ -117,11 +123,13 @@ begin
   # Perform queries based on various conditions
   # params  = {"tracking_numbers" => "92612903029511573130094547","courier_code"=>"usps"}
   # params  = {"tracking_numbers" => "92612903029511573130094547,92612903029511573030094548","courier_code"=>"usps"}
-  params  = {"created_date_min" => "2023-08-23T14:00:00+08:00","created_date_max"=>"2023-08-23T15:04:00+08:00"}
+  params  = {"created_date_min" => "2023-08-23T14:00:00+00:00","created_date_max"=>"2023-08-23T15:04:00+00:00"}
   response = Tracking51::Tracking.get_tracking_results(params)
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 ```
 
@@ -134,6 +142,8 @@ begin
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 ```
 
@@ -147,6 +157,8 @@ begin
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 ```
 
@@ -159,6 +171,8 @@ begin
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 ```
 
@@ -171,6 +185,8 @@ begin
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 ```
 ## Air Waybill
@@ -183,6 +199,8 @@ begin
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+   puts "Caught Standard Error: #{e.message}"
 end
 ```
 

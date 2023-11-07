@@ -9,4 +9,6 @@ begin
   puts response
 rescue Tracking51::Tracking51Exception => e
   puts "Caught Custom Exception: #{e.message}"
+rescue StandardError => e
+  puts "Caught Standard Error: #{e.message}"
 end

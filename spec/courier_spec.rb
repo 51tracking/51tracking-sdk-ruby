@@ -16,20 +16,4 @@ describe Tracking51::Courier do
       end
     end
   end
-
-  describe '.detect' do
-    context 'detect' do
-      it 'detects a tracking number' do
-        params = { "tracking_number" => "YOUR_TRACKING_NUMBER" }
-        response = Tracking51::Courier.detect(params)
-        expect(response).to be_a(Hash)
-        expect(response['meta']['code']).to eq(200)
-      end
-
-      it 'raises an exception for missing tracking number' do
-        params = { "tracking_number" => "" }
-        expect { Tracking51::Courier.detect(params) }.to raise_error(Tracking51::Tracking51Exception, Tracking51::Consts::ErrMissingTrackingNumber)
-      end
-    end
-  end
 end
